@@ -1,0 +1,29 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  padding: 18px;
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 42px;
+  list-style: none;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+}

@@ -1,0 +1,84 @@
+.hero-section {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  /* padding: 0 2rem; */
+  box-sizing: border-box;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  /* gap: 4rem;
+  flex-wrap: wrap;
+  text-align: left; */
+}
+
+.hero-image {
+  width: 480px;
+  max-width: 100%;
+}
+
+.hero-text {
+  justify-content: center;
+  max-width: 470px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+.hero-text h1 {
+  font-weight: 700;
+  color: #000000;
+  font-size: 48px;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.25);
+  margin: 0;
+}
+
+.hero-text p {
+  font-size: 24px;
+  font-weight: 400;
+  width: 349px;
+  color: #666666;
+  margin: 0;
+}
+
+.sign-up-btn {
+  padding: 0.75rem 2rem;
+  background-color: #fff;
+  border-radius: 999px;
+  width: 141px;
+  border: 1px solid #f26231; /* Explicit border width and color */
+  font-weight: 400;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sign-up-btn:hover {
+  background-color: #f26231;
+  color: #fff;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-image {
+    width: 300px;
+  }
+}

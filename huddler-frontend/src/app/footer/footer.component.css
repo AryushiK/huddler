@@ -1,0 +1,49 @@
+.footer {
+  background-color: #FFEED5; /* your background color from screenshot */
+  padding: 40px 0;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 280px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo-img {
+  width: 220px; 
+  height: 90px;
+  margin-left: 200px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 90px; 
+  margin-right: 160px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-column a {
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Montserrat', sans-serif; /* matching font */
+  font-weight: 500;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}

@@ -135,7 +135,7 @@ p.fade-slide-in.delay-2 {
 }
 .info-section {
   
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -240,7 +240,7 @@ display: flex;
 }
 
 .purple-card3 {
-  background-color: #6b4b8b;
+  background-color: #3F2149;
   color: white;
   width: 1246px;
 height: 409px;
@@ -270,7 +270,7 @@ display: flex;
 }
 
 .purple-card4 {
-  background-color: #3F2149;
+  background-color: #3A2758;
   color: white;
   width: 1246px;
 height: 409px;

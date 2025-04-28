@@ -140,6 +140,7 @@ p.fade-slide-in.delay-2 {
   flex-direction: column;
   gap: 2rem;
   align-items: center;
+  overflow: visible;
 }
 
 .info-card {
@@ -152,19 +153,7 @@ p.fade-slide-in.delay-2 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.purple-card2 {
-  background-color: #754982;
-  color: white;
-  width: 1246px;
-height: 409px;
-top: 382px;
-left: -631px;
-border-radius: 39px;
-display: flex;
-  align-items: center;
-  justify-content: space-between;
 
-}
 .text-side2 {
   flex: 1;
   font-weight: 300;
@@ -188,19 +177,6 @@ display: flex;
   object-fit: contain;
 }
 
-.purple-card1 {
-  background-color: #875598;
-  color: white;
-  width: 1246px;
-height: 409px;
-top: 382px;
-left: -631px;
-border-radius: 39px;
-display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-}
 .text-side {
   flex: 1;
   font-weight: 300;
@@ -248,31 +224,63 @@ display: flex;
   object-fit: contain;
 }
 
+.purple-card2 {
+  background-color: #754982;
+  color: white;
+  width: 1246px;
+height: 409px;
+top: 200px;
+left: -631px;
+border-radius: 39px;
+display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+
+}
 
 .purple-card3 {
   background-color: #6b4b8b;
   color: white;
   width: 1246px;
 height: 409px;
-top: 382px;
+top: 250px;
 left: -631px;
 border-radius: 39px;
 display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
 
 }
+
+.purple-card1 {
+  background-color: #875598;
+  color: white;
+  width: 1246px;
+height: 409px;
+top: 152px;
+left: -631px;
+border-radius: 39px;
+display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+
+}
+
 .purple-card4 {
   background-color: #3F2149;
   color: white;
   width: 1246px;
 height: 409px;
-top: 382px;
+top: 300px;
 left: -631px;
 border-radius: 39px;
 display: flex;
   align-items: center;
   justify-content: space-between;
+  position: sticky;
 
 }
 /* //huddler section// */

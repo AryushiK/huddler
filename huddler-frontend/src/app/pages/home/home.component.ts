@@ -1,6 +1,11 @@
-import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+import { isPlatformBrowser } from '@angular/common';
+
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-home',
@@ -9,54 +14,73 @@ import { RouterModule } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent{}
-// export class HomeComponent implements OnInit {
-//   // Define the cards array
-//   cards: any[] = [
-//     { id: 1, class: 'purple-card1' },
-//     { id: 2, class: 'purple-card2' },
-//     { id: 3, class: 'purple-card3' },
-//     { id: 4, class: 'purple-card4' },
-//   ];
+export class HomeComponent implements AfterViewInit {
+  constructor(private el: ElementRef,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
-//   constructor(private el: ElementRef) {}
+  ngAfterViewInit(): void {
+    if (isPlatformBrowser(this.platformId)) {  //  Run this only in browser
+      gsap.registerPlugin(ScrollTrigger);
 
-//   ngOnInit(): void {
-//     // Any initialization if necessary
-//   }
+    const cards = gsap.utils.toArray<HTMLElement>(
+      this.el.nativeElement.querySelectorAll('.info-card')
+    );
 
-//   @HostListener('window:wheel', ['$event'])
-// onWheelScroll(event: WheelEvent) {
-//   // Get the cards and section
-//   const cards = this.el.nativeElement.querySelectorAll('.info-card');
-  
-//   // Explicitly cast cards to an array of HTMLElement
-//   const cardArray = Array.from(cards) as HTMLElement[];
+  //   const dummy = this.el.nativeElement.querySelector('.scroll-trigger-dummy');
+  // if (dummy) {
+  //   cards.push(dummy);
+  // }
 
-//   let scrollDirection = event.deltaY > 0 ? 'down' : 'up';
+    cards.forEach((card, index) => {
+      if (index === 0) return;
 
-//   // Find the current visible card
-//   const visibleIndex = cardArray.findIndex((card: HTMLElement) => {
-//     return card.style.transform === 'translateY(0%)';
-//   });
+      const prevCard = cards[index - 1];
 
-//   if (scrollDirection === 'down' && visibleIndex < cardArray.length - 1) {
-//     // Move the next card up over the current card
-//     const nextCard = cardArray[visibleIndex + 1];
-//     nextCard.style.transform = 'translateY(0%)'; // Show the next card
-//     const currentCard = cardArray[visibleIndex];
-//     currentCard.style.transform = 'translateY(-100%)'; // Move the current card up
-//   }
+      ScrollTrigger.create({
+        trigger: card,
+        start: 'top center',
+        end: 'bottom top',
+        onEnter: () => {
+          gsap.to(prevCard, {
+            scale: 0.85,
+            duration: 0.4,
+            ease: 'power2.out',
+          });
+        },
+        onLeaveBack: () => {
+          gsap.to(prevCard, {
+            scale: 1,
+            duration: 0.4,
+            ease: 'power2.out',
+          });
+        },
+      });
+      if (index === cards.length - 1) {
+        ScrollTrigger.create({
+          trigger: card,
+          start: 'top 40%', // Trigger when the card's top reaches the center
+           // Trigger when it goes out of view
+          onEnter: () => {
+            gsap.to(card, {
+              scale: 0.85,
+              duration: 0.4,
+              ease: 'power2.out',
+              delay: 1,
+              
+            });
+          },
+          onLeaveBack: () => {
+            gsap.to(card, {
+              scale: 1,
+              duration: 0.4,
+              ease: 'power2.out',
+            });
+          },
+        });
+      }
 
-//   if (scrollDirection === 'up' && visibleIndex > 0) {
-//     // Move the previous card back into view
-//     const prevCard = cardArray[visibleIndex - 1];
-//     prevCard.style.transform = 'translateY(0%)'; // Show the previous card
-//     const currentCard = cardArray[visibleIndex];
-//     currentCard.style.transform = 'translateY(100%)'; // Move the current card down
-//   }
-
-//   // Prevent default scroll behavior
-//   event.preventDefault();
-// }
-// }
+    });
+  }
+  }
+}

@@ -226,35 +226,6 @@ p.fade-slide-in.delay-2 {
   object-fit: contain;
 }
 
-.purple-card2 {
-  background-color: #754982;
-  color: white;
-  width: 1246px;
-height: 409px;
-top: 162px;
-left: -631px;
-border-radius: 39px;
-display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
-
-}
-
-.purple-card3 {
-  background-color: #3F2149;
-  color: white;
-  width: 1246px;
-height: 409px;
-top: 172px;
-left: -631px;
-border-radius: 39px;
-display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
-
-}
 
 .purple-card1 {
   background-color: #875598;
@@ -271,12 +242,42 @@ display: flex;
 
 }
 
+.purple-card2 {
+  background-color: #754982;
+  color: white;
+  width: 1246px;
+height: 409px;
+top: 202px;
+left: -631px;
+border-radius: 39px;
+display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+
+}
+
+.purple-card3 {
+  background-color: #3F2149;
+  color: white;
+  width: 1246px;
+height: 409px;
+top: 252px;
+left: -631px;
+border-radius: 39px;
+display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+
+}
+
 .purple-card4 {
   background-color: #3A2758;
   color: white;
   width: 1246px;
 height: 409px;
-top: 182px;
+top: 302px;
 left: -631px;
 border-radius: 39px;
 display: flex;

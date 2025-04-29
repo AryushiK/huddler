@@ -39,7 +39,7 @@ export class HomeComponent implements AfterViewInit {
 
       ScrollTrigger.create({
         trigger: card,
-        start: 'top center',
+        start: 'top bottom',
         end: 'bottom top',
         onEnter: () => {
           gsap.to(prevCard, {
@@ -59,14 +59,14 @@ export class HomeComponent implements AfterViewInit {
       if (index === cards.length - 1) {
         ScrollTrigger.create({
           trigger: card,
-          start: 'top 40%', // Trigger when the card's top reaches the center
+          start: 'top 50%', // Trigger when the card's top reaches the center
            // Trigger when it goes out of view
           onEnter: () => {
             gsap.to(card, {
               scale: 0.85,
               duration: 0.4,
               ease: 'power2.out',
-              delay: 1,
+              // delay: 1,
               
             });
           },

@@ -6,7 +6,7 @@
   background-color: white;
   /* padding: 0 2rem; */
   box-sizing: border-box;
-  background-color: #FFEED5;
+  background-color: white;
 }
 
 @keyframes fadeSlideIn {
@@ -134,7 +134,7 @@ p.fade-slide-in.delay-2 {
   }
 }
 .info-section {
-  
+  background-color: white;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
@@ -146,13 +146,13 @@ p.fade-slide-in.delay-2 {
 .info-card {
   transform-origin: center center;
   transition: transform 0.3s ease;
-  max-width: 1000px;
+  /* max-width: 1000px; */
   width: 100%;
   border-radius: 1.5rem;
   padding: 2rem;
   font-size: 1.125rem;
   line-height: 1.8;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); */
 }
 
 
@@ -228,7 +228,7 @@ p.fade-slide-in.delay-2 {
 
 
 .purple-card1 {
-  background-color: #875598;
+  /* background-color: #875598; */
   color: white;
   width: 1246px;
 height: 409px;
@@ -243,7 +243,7 @@ display: flex;
 }
 
 .purple-card2 {
-  background-color: #754982;
+  /* background-color: #754982; */
   color: white;
   width: 1246px;
 height: 409px;
@@ -258,7 +258,7 @@ display: flex;
 }
 
 .purple-card3 {
-  background-color: #3F2149;
+  /* background-color: #3F2149; */
   color: white;
   width: 1246px;
 height: 409px;
@@ -273,22 +273,39 @@ display: flex;
 }
 
 .purple-card4 {
-  background-color: #3A2758;
-  color: white;
-  width: 1246px;
-height: 409px;
-top: 302px;
-left: -631px;
-border-radius: 39px;
-display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
+   /* background-color: #3F2149; */
+   color: white;
+   width: 1246px;
+ height: 409px;
+ top: 252px;
+ left: -631px;
+ border-radius: 39px;
+ display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: sticky;
+}
 
+.video-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 39px;
+  overflow: hidden;
+  border: 2px solid black;
+}
+
+.purple-card1 video,
+.purple-card2 video,
+.purple-card3 video,
+.purple-card4 video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: slowVideo 30s linear infinite;
 }
 /* //huddler section// */
 .huddler-section {
-  background-color: #FFEED5;
+  background-color: white;
   padding: 4rem 1rem;
   text-align: center;
   font-family: 'Helvetica Neue', sans-serif;
@@ -396,7 +413,7 @@ display: flex;
 }
 /* //wealth journey// */
 .wealth-journey-section {
-  background-color: #FFEED5;
+  background-color: white;
   padding: 3rem 1rem;
   font-family: 'Arial', sans-serif;
   text-align: center;

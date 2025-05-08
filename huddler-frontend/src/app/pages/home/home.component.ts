@@ -23,6 +23,36 @@ export class HomeComponent implements AfterViewInit {
     if (isPlatformBrowser(this.platformId)) {  //  Run this only in browser
       gsap.registerPlugin(ScrollTrigger);
 
+      const videoCardSelectors = ['.purple-card1', '.purple-card2', '.purple-card3', '.purple-card4'];
+
+    videoCardSelectors.forEach((selector) => {
+      const card = this.el.nativeElement.querySelector(selector) as HTMLElement;
+      const video = card?.querySelector('video') as HTMLVideoElement;
+
+      if (video) {
+        video.playbackRate = 0.5;
+        video.pause(); // Ensure all videos start paused
+
+        ScrollTrigger.create({
+          trigger: card,
+          start: 'top center',
+          end: 'bottom center',
+          onEnter: () => {
+            video.play();
+          },
+          onLeave: () => {
+            video.pause();
+          },
+          onEnterBack: () => {
+            video.play();
+          },
+          onLeaveBack: () => {
+            video.pause();
+          },
+        });
+      }
+    });
+
     const cards = gsap.utils.toArray<HTMLElement>(
       this.el.nativeElement.querySelectorAll('.info-card')
     );

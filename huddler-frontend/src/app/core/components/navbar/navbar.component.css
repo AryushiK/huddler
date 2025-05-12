@@ -1,9 +1,17 @@
-.navbar {
+/* .navbar {
+ 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: transparent;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  font-size: 14px;
-  background-color: white;
+  padding: 0 24px;
+  height: 60px;
+  backdrop-filter: blur(8px);
 }
 
 .logo {
@@ -23,8 +31,104 @@
   font-weight: 400;
   font-size: 14px;
 }
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    flex-direction: column;
+    gap: 16px;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
 
 .nav-links a {
   text-decoration: none;
   color: #000;
+} */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
+  background-color: transparent;
+  backdrop-filter: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.logo img {
+  height: 40px;
+}
+
+.hamburger {
+  position: absolute;
+  right: 16px;
+  font-size: 35px;
+  cursor: pointer;
+  color: #000;
+  z-index: 1100;
+  margin-right: 60px;
+}
+
+.nav-links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background-color: rgba(255, 255, 255, 0.97);
+  padding: 1rem 1.5rem;
+  list-style: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.nav-links li {
+  margin: 10px 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.nav-links.active {
+  display: flex;
 }

@@ -96,12 +96,12 @@
 
 .hamburger {
   position: absolute;
-  right: 16px;
+  right: 106px;
   font-size: 35px;
   cursor: pointer;
   color: #000;
   z-index: 1100;
-  margin-right: 60px;
+
 }
 
 .nav-links {

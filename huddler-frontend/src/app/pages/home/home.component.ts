@@ -39,14 +39,14 @@ export class HomeComponent implements AfterViewInit {
           end: 'bottom center',
           onEnter: () => {
             video.currentTime = 0;
-            // video.play();
+            video.play();
           },
           onLeave: () => {
             video.pause();
           },
           onEnterBack: () => {
             video.currentTime = 0;
-            // video.play();
+            video.play();
           },
           onLeaveBack: () => {
             video.pause();
